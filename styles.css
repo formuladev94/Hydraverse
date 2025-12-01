@@ -96,7 +96,7 @@ body{
 
 /* aquí es donde puedo definir estilos de cada sección de la página*/
 .section {
-    padding: 100px 20 px;
+    padding: 10px 20px;
     text-align: center;
     min-height: 100vh;
     padding-top: 100px;
@@ -116,25 +116,37 @@ body{
 }
 
 /* Aquí es donde defino los estilos para las tarjetas tipo pop-up*/
+.cards-container {
+    display: flex; /* Usamos flex para la distribución */
+    flex-wrap: wrap; /* Permitimos que las tarjetas salten de línea */
+    justify-content: center; /* Centramos las tarjetas horizontalmente */
+    gap: 30px; /* Espacio entre las tarjetas */
+    max-width: 1200px; /* Un ancho máximo para centrar el contenido */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 30px;
+}
+
 .resource-card {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     border-radius: 10px;
     padding: 20px;
     margin: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 8px rgba(41, 43, 173, 0.918);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: var(--text-color);
+    flex-grow: 1;
+    max-width: 500px;
 }
 
 .resource-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(30, 106, 156, 0.555);
 }
 
 .resource-card img{
-    width: 100%;
-    height: 200px;
+    width: 85%;
+    height: 90px;
     object-fit: cover;
     border-radius: 15px;
     margin-bottom: 15px;
@@ -167,14 +179,14 @@ body{
 }
 
 .modal-content {
-   background-color: var(--background-color);
+   background-color: var(--secondary-color);
    margin: 5% auto;
    padding: 30px;
    border: 2px solid var(--primary-color);
    border-radius: 20px;
    width: 80%;
    max-width: 800px;
-   box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+   box-shadow: 0 0 25px rgba(55, 0, 255, 0.5);
    position: relative;
    color: var(--text-color);
    display: flex;
@@ -214,7 +226,7 @@ body{
 
 .close-button:hover,
 .close-button:focus {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 /* Estilos para los botones dentro del modal */
@@ -228,6 +240,7 @@ body{
     margin: 0 10px;
     background-color: var(--primary-color);
     color: var(--text-color);
+    box-shadow: rgba(0, 0, 0, 0.4);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -235,11 +248,11 @@ body{
 }
 
 .spaceapps-btn:hover {
-    background-color: var(--secondary-color);
+    background-color: rgba(28, 30, 163, 0.63);
 }
 
 .demo-btn:hover {
-    background-color: var(--secondary-color);
+    background-color: rgba(28, 30, 163, 0.63);
 }
 
 

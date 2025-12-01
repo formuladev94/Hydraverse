@@ -1,0 +1,27 @@
+{
+"proyectos": [
+{
+"id": 1,
+"titulo": "AEGIRIS",
+"nominacion_challenge": "Global Nominee 2024 - People's Choice Award 2024",
+"descripcion_corta": "Gives us an immersion into an aquatic world where life is somewhat more similar to that of our planet.",
+"contenido_completo": "Aegiris is an oceanic planet whose life source is based on chemosynthesis. It has a mass 1.3 times that of Earth and a surface composed of 98% water. Through this project, we aim to develop a planet with peculiar and interesting characteristics to explore its geology, atmospheric composition, and the development of life. By addressing topics such as energy sources, biological adaptation, environmental impact, among others, we have tackled the challenge Beyond Sunlight: An Aquatic Chemosynthetic World, allowing us to understand how life functions without sunlight and its evolution on an oceanic planet. Aegiris offers us an immersion into an unknown world, fostering imagination, curiosity, and inspiration. It gives us the opportunity to understand life, not only on our planet but also in distant worlds and others created from our imagination.",
+"imagen_url": "assets/aegiris.png",
+"palabras_clave": ["biology", "astronomy", "chemosynthesis"],
+"nasa_space_apps_challenge": "https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/a-traves-del-universo/?tab=project",
+"demo": "https://drive.google.com/file/d/1CWOPErwnDROhyw4cBNUMu4zNlWHGBnLQ/view?usp=sharing"
+ },
+ {
+ "id": 2,
+"titulo": "LEGACY OF THE LAND",
+"nominacion_challenge": "Global Nominee 2025",
+"descripcion_corta": "Is an educational video game project focused on agriculture and livestock farming.",
+"contenido_completo": "We developed an interactive tool for agricultural producers that uses high-precision satellite data to make critical decisions in the face of climate change in Argentina. We addresed the challenge of addressing the lack of accessible information by presenting three regional scenarios (North, Center, South) through thematic heroes. Producers must analyze data from agencies and programs such as NASA Worldview, CONAE SAOCOM and GIMMS to solve a problem related to Adaptability (Direct Seeding), Precision (Seeding Density), or Management (Pasture Rotation). For example, in the Central Region, the SAOCOM satellite reveals hidden subsurface moisture, allowing producers to sow in drought-stricken areas by reducing density. This project is important because it transforms complex scientific data into concrete, localized agronomic solutions. It demonstrates how space technology is vital to minimizing losses, ensuring food production, and promoting soil sustainability in Argentina. Crucially, despite being a demonstration focused on Argentina, the use of satellite technology makes the model highly adaptable and applicable to other countries facing similar agricultural challenges globally.",
+"imagen_url": "assets/legacy_of_the_land.png",
+"palabras_clave": ["livestock", "agriculture", "farming"],
+"nasa_space_apps_challenge": "https://www.spaceappschallenge.org/2025/find-a-team/hydraverse/?tab=project",
+"demo": "https://legacy-of-the-land.vercel.app/"
+}
+
+ ]
+}
