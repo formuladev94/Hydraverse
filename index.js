@@ -43,3 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+
+// FUNCIONALIDAD DEL MODAL DE RECURSOS ////
