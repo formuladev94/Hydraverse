@@ -113,6 +113,7 @@ body{
     max-width: 800px;
     margin: 0 auto;
     color: var(--text-color);
+    text-align: justify;
 }
 
 /* Aquí es donde defino los estilos para las tarjetas tipo pop-up*/
@@ -265,6 +266,9 @@ body{
     color: var(--text-color);
 }
 
+strong {
+    color: var(--primary-color);
+}
 
 
 @media (max-width: 768px) {
