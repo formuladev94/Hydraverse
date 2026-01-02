@@ -119,6 +119,7 @@ function initProjectCards() {
                         </div>
                     `;
                     modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
                 }
             });
         });
@@ -128,6 +129,7 @@ function initProjectCards() {
     if(closeButton) {
         closeButton.addEventListener('click', () => {
             modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
         });
     }
 
@@ -136,6 +138,7 @@ function initProjectCards() {
         window.addEventListener('click', (event) => {
             if (event.target === modal) {
                 modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
         });
     }

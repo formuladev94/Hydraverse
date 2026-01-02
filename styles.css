@@ -6,6 +6,12 @@
     --font-family: 'Arial', sans-serif;
 }
 
+/* AJUSTE 1: Para que el scroll no sea brusco y caiga bien */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body{
     margin: 0;
     font-family: var(--font-family);
@@ -15,7 +21,7 @@ body{
     overflow-x: hidden;
 }
 
-/*Defino colores y estilos para la barra de navegación*/
+/* Barra de navegación */
 .navbar{
     position: fixed;
     top:0;
@@ -38,8 +44,8 @@ body{
 .nav-links a{
     color: var(--text-color);
     text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
     text-transform: uppercase;
     transition: color 0.3s ease, transform 0.3s ease;
     padding: 10px 20px;
@@ -52,8 +58,6 @@ body{
     transform: translateY(-2px);
 }
 
-
-/*Estilos de logo*/
 .logo{
     height: 40px;
     margin-right: auto;
@@ -74,7 +78,6 @@ body{
     color: var(--text-color);
 }
 
-/*Estilos para el botón hamburguesa*/
 .menu-toggle {
     display:none;
     flex-direction: column;
@@ -94,18 +97,73 @@ body{
     transition: all 0.3s linear;
 }
 
-/* aquí es donde puedo definir estilos de cada sección de la página*/
-.section {
-    padding: 10px 20px;
+/* AJUSTE 2: Cambié absolute por relative para que NO flote y empuje a las demás secciones */
+.home{
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen no se deforme */
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.bienvenida{
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
     text-align: center;
-    min-height: 100vh;
-    padding-top: 100px;
+}
+
+.text-bienvenida{
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.btn{
+
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+.btn:hover{
+    background-color: rgba(28, 30, 163, 0.63);
+}
+
+/*Sección de secciones propiamente dicha*/
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    min-height: auto; 
 }
 
 .encabezado {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: var(--text-color);
+    color: var(--secondary-color);
 }
 
 .description {
@@ -116,14 +174,28 @@ body{
     text-align: justify;
 }
 
-/* Aquí es donde defino los estilos para las tarjetas tipo pop-up*/
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/*Estilos de las tarjetas de recursos*/
 .cards-container {
-    display: flex; /* Usamos flex para la distribución */
-    flex-wrap: wrap; /* Permitimos que las tarjetas salten de línea */
-    justify-content: center; /* Centramos las tarjetas horizontalmente */
-    gap: 30px; /* Espacio entre las tarjetas */
-    max-width: 1200px; /* Un ancho máximo para centrar el contenido */
-    margin: 0 auto; /* Centra el contenedor en la página */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 30px;
 }
 
@@ -164,7 +236,6 @@ body{
     color: var(--text-color);
 }
 
-/*Estilos para el modal*/
 .modal {
     display: none;
     position: fixed;
@@ -173,14 +244,18 @@ body{
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    /* Ajuste clave: */
+    overflow-y: auto; 
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
-    padding-top: 60px;
+}
+
+.modal.active{
+    display: flex;
 }
 
 .modal-content {
-   background-color: var(--secondary-color);
+   background-color: var(--background-color);
    margin: 5% auto;
    padding: 30px;
    border: 2px solid var(--primary-color);
@@ -194,6 +269,21 @@ body{
    flex-direction: column;
    align-items: center;
 }
+
+/* Personaliza la barra de scroll para navegadores modernos */
+.modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 
 .modal-content h3 {
     text-align: center;
@@ -230,7 +320,6 @@ body{
     color: var(--primary-color);
 }
 
-/* Estilos para los botones dentro del modal */
 .modal-button {
     margin-top: 20px;
 }
@@ -248,62 +337,32 @@ body{
     transition: background-color 0.3s ease;
 }
 
-.spaceapps-btn:hover {
-    background-color: rgba(28, 30, 163, 0.63);
-}
-
-.demo-btn:hover {
-    background-color: rgba(28, 30, 163, 0.63);
-}
-
-
-/*Pie de página*/
 .footer {
     background-color: var(--background-color);
     text-align: center;
-    padding: 5px 0;
-    margin-top: 5px;
+    padding: 20px 0;
     color: var(--text-color);
 }
-
-strong {
-    color: var(--primary-color);
+.insta-link {
+    text-decoration: none;
+    margin-left: 5px;
 }
 
+.insta-link strong:hover {
+    color: var(--secondary-color) !important;
+    text-shadow: 0 0 10px var(--primary-color);
+}
 
 @media (max-width: 768px) {
-    .nav-bar {
-        justify-content: space-between;
+    .menu-toggle { 
+        display: flex; 
     }
-
-    .menu-toggle {
-        display: flex;
-        margin-right: 20px;
-    }
-
-    .nav-links {
+    .nav-links { 
         display: none;
-        position: absolute;
-        top: 84px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        background-color: var(--background-color);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-        padding: 10px 0;
-        z-index: 90;
+     }
+    .nav-links.active { 
+        display: flex; 
+        flex-direction: column; 
     }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        padding: 10px;
-        width: 90%;
-        text-align: center;
-        margin: 5px 0;
-        border-radius: 5px;
-    }
+    .bienvenida { font-size: 2.5rem; }
 }
