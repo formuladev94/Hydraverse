@@ -32,4 +32,5 @@
 
 <h3>Autora:</h3>
 <p> Medina, Maria del Rosario</p>
-<p>Github: rosedkr94</p>
+<p>Github: formuladev94</p>
+<p>Instagram: formula.dev</p>
