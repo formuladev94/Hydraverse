@@ -353,16 +353,85 @@ strong {
     text-shadow: 0 0 10px var(--primary-color);
 }
 
-@media (max-width: 768px) {
-    .menu-toggle { 
-        display: flex; 
+
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px){
+    .navbar{
+        justify-content: space-between;
     }
-    .nav-links { 
+
+    .menu-toggle{
+        display: flex;
+        margin-right: 20px;
+    }
+
+    .nav-links{
         display: none;
-     }
-    .nav-links.active { 
-        display: flex; 
-        flex-direction: column; 
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--background-color);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        padding: 10px 0;
+        z-index: 90;
     }
-    .bienvenida { font-size: 2.5rem; }
+
+    .nav-links.active{
+        display: flex;
+    }
+
+    .nav-links a{
+        padding: 10px;
+        width: 90%;
+        text-align: center;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+
+    .caption h2{
+        font-size: 1.8em;
+        padding: 0 10px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .encabezado{
+        font-size: 2.5rem;
+    }
+
+    .description{
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+
+    .home-subtext{
+        font-size: 1rem;
+    }
+
 }
+
+
+/* Para pantallas medianas (Tablets) */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .resource-card {
+        flex: 0 1 45%; /* Se ven 2 por línea */
+        max-width: 45%;
+    }
+}
+
+/* Para pantallas chicas (Celulares) */
+@media (max-width: 599px) {
+    .resource-card {
+        flex: 0 1 100%; /* Una sola tarjeta ancha */
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
